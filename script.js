@@ -49,4 +49,5 @@ function darkmode() {
       console.log("Light mode");
       theme4 = "LIGHT";
     }
+
   }

@@ -19,20 +19,21 @@
   font-family: Poppins;
 }
 
-body{
+body {
   overflow: hidden;
 }
 
 .area {
   background: var(--background_light);
   width: 100%;
-  height: 100%;
+  height: 120%;
 }
 
 .area.dark-mode {
+  position: absolute;
   background: var(--background_dark);
   width: 100%;
-  height: 100vh;
+  height: 120%;
 }
 .circles {
   position: absolute;
@@ -165,7 +166,7 @@ body{
 .mybtn {
   cursor: pointer;
   position: fixed;
-  z-index: 100;
+  z-index: 4;
   bottom: 10px;
   right: 10px;
   height: 60px;
@@ -178,8 +179,8 @@ body{
   border: none;
 }
 
-.mybtn.dark-mode{
-    background-color: var(--primary_dark);
+.mybtn.dark-mode {
+  background-color: var(--primary_dark);
 }
 
 .mybtn:hover {
@@ -187,8 +188,8 @@ body{
 }
 
 .mybtn.dark-mode:hover {
-    background-color: var(--background_dark);
-  }
+  background-color: var(--background_dark);
+}
 
 .material-symbols-outlined {
   color: var(--accent_light);
@@ -196,4 +197,73 @@ body{
 
 .material-symbols-outlined.dark-mode {
   color: var(--accent_dark);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 555px;
+  background: var(--primary_light);
+  border-radius: 16px;
+  padding: 20px;
+  z-index: 3;
+  color: var(--text_light);
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  display: block;
+}
+
+.search-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  outline: none;
+  border-radius: 10px;
+  font-size: 22px;
+  color: var(--text_light);
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 0 48px 0 42px;
+}
+
+.search-box input::placeholder{
+  color: var(--text_light);
+}
+
+.search-box button {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 28px;
+  padding: 0 40px 0 10px;
+  cursor: pointer;
+}
+
+.search-box button i{
+  color: var(--text_light);
+}
+
+.weather-box img{
+  width: 60%;
+}
+.weather-box{
+  text-align: center;
+  margin: 40px 0;
+  z-index: 3;
 }
